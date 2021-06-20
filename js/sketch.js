@@ -130,7 +130,7 @@ console.log(mapLeaflet);
 function setup() {
     console.log('firing setup()');
     
-    canvas = createCanvas(windowWidth/3, windowHeight/2);
+    //canvas = createCanvas(windowWidth, windowHeight);
   
     // //IxD
     //let UI          = createDiv('');
@@ -498,7 +498,7 @@ function onJsonLoad() {
             if(count > 150) {
                 console.log(count, meteorArray[count].year);
                 document.getElementById('year-display').innerHTML = meteorArray[count].year;
-                document.getElementById('context').style.display = "none";
+                document.getElementById('context').innerHTML = "Vous pouvez cliquer sur les points d'impacts afin d'avoir des informations concernant les météorites.";
                 
 
                 // synth8.triggerAttackRelease(["C4", "A4", "G4"], "8n")
@@ -710,6 +710,7 @@ function onJsonLoad() {
             //     className: 'pulse'
             // })
             // onde.addTo(mapLeaflet);
+          
           
         } else {
             console.log("clear interval");
